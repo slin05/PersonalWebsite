@@ -12,11 +12,14 @@
         h1 {
             color: #1a5490;
         }
-
         
         h2 {
             color: #2874a6;
             margin-top: 30px;
+        }
+
+        h3 {
+            color: #1a5490;
         }
         
         p {
@@ -35,7 +38,42 @@
         }
 
         .project h3 {
-        color: #1a5490;
+            color: #1a5490;
+        }
+
+        .critique {
+            background-color: white;
+            padding: 25px;
+            margin: 15px 0;
+            border: 1px solid #b3d9f2;
+        }
+
+        .critique h3 {
+            color: #1a5490;
+            margin-top: 25px;
+        }
+
+        .critique h3:first-child {
+            margin-top: 0;
+        }
+
+        .critique img {
+            width: 100%;
+            max-width: 800px;
+            display: block;
+            margin: 15px 0;
+            border: 1px solid #b3d9f2;
+        }
+
+        .critique ul {
+            line-height: 1.8;
+        }
+
+        .caption {
+            font-size: 0.85em;
+            color: #555;
+            margin-top: -10px;
+            margin-bottom: 15px;
         }
     </style>
 </head>
@@ -44,20 +82,107 @@
     <h1>Steven Lin</h1>
     <p>IT Major | Computer Science Minor</p>
 
-    
     <h2>About Me</h2>
     <p>Hi! I'm a college senior studying IT and computer science. I hope this semester goes well!</p>
-    
+
+    <h2>Visualization in the Wild Assignment</h2>
+
+    <div class="critique">
+
+        <h3>uma.moe Team Stadium Statistics</h3>
+        <p><a href="https://uma.moe/tools/statistics" target="_blank">uma.moe/tools/statistics</a></p>
+
+        <h3>Overview</h3>
+        <p>
+            uma.moe is a community run and built data base for the game <em>Umamusume: Pretty Derby</em>. 
+            What is Umamusume Pretty Derby? It is a game where you train horses (in the form of anime girls). 
+            I chose this visualization because I personally play Umamusume Pretty Derby and I wanted to learn 
+            more about this amazing tool!
+        </p>
+
+        <img src="screenshots/overview.png" alt="uma.moe Team Stadium Statistics overview showing Most Popular Uma Musume bar chart">
+        <p class="caption">The main view showing Most Popular Uma Musume across all classes, with character portraits along the x-axis.</p>
+
+        <h3>The Data</h3>
+        <p>
+            The data is sourced by the community. However, we must keep in mind that this is very biased towards people that actually submit their data via the tool.
+            This data is based on Team Stadium which is a gamemode that puts trainers against other trainers's trained umas (horses).
+            As of today (4/22/2026) the tool tracks over 23 million support card entries across roughly 22 million Uma Musume from 1.8 million active users
+        </p>
+
+        <h3>Who Is This For?</h3>
+        <p>
+            This tool is aimed towards players that have a basic grasp of the game but want to improve their builds so that they can compete at higher levels!
+        </p>
+
+        <img src="screenshots/filters.png" alt="Sidebar filters showing Scenario toggle and Team Class breakdown">
+        <p class="caption">The filter sidebar lets users narrow data by training scenario and competitive class tier. Class 3 makes up 46% of all submissions.</p>
+
+        <h3>Questions &amp; Insights</h3>
+        <p>The tool lets users explore questions like:</p>
+        <ul>
+            <li>Which Uma Musume are most popular in competitive play right now?</li>
+            <li>Does that popularity shift between training scenarios or class tiers?</li>
+            <li>What stat profiles do competitive teams in a given class typically have?</li>
+            <li>What support card deck compositions are players relying on most?</li>
+        </ul>
+        <p>
+            You can filter for these questions by going through the sidebar filters on the left!
+        </p>
+
+        <img src="screenshots/class3_ura.png" alt="Most Popular Uma Musume filtered to Class 3, URA scenario">
+        <p class="caption">Filtering to Class 3 in the URA scenario reveals Sakura Bakushin O leading with ~310K usages.</p>
+
+        <img src="screenshots/stats.png" alt="Overview showing Team Class Distribution donut chart and Average Stats by Team Stadium Class bar chart">
+        <p class="caption">The Average Stats by Team Stadium Class chart shows Speed (~870) far ahead of all other stats in Class 3.</p>
+
+        <p>
+            <strong>Example insight:</strong> If you filter to Class 3, Sakura Baskushin O is the most popular by far as well speed being the most popular trait!
+        </p>
+
+        <h3>Visual &amp; Interaction Design</h3>
+        <p>
+           I'd say the character face on the popularity chart is the nicest touch as it gives you facial recognition instead of just text!
+        </p>
+
+        <img src="screenshots/support_cards.png" alt="Support Card Analysis showing deck composition chart with icon combinations">
+        <p class="caption">The Most Used Deck Compositions chart uses icon sequences rather than text to represent card type combinations.</p>
+
+        <p>
+            Most used deck is the best tool here I think. This is so newer players can understand which cards to gacha for.
+        </p>
+        <p>
+           On another note though, colors on the popularity chart dont really corrspond to anything. They should color code it to either what position they run or what type of runner they are.
+            This is so that newer players can understand which umas dominate which categories and build decks accordingly.
+        </p>
+        <p>
+            There's no legend for the deck composition system. There should be a small and simple one for easy accessibility.
+        </p>
+
+        <h3>Limitations</h3>
+        <ul>
+            <li><strong>No time axis.</strong> You can only see the current meta, past meta cards or characters cannot be viewed.</li>
+
+            <li><strong>Usage ≠ win rate.</strong> Tool only shows popularity not how good they are competitively.</li>
+
+            <li><strong>Sampling bias.</strong> As mentioned before, this tool only takes from those that use it. It has a huge bias.</li>
+
+            <li><strong>No running style breakdown.</strong> You still need to know what a character is to use this tool effectively due to no
+            information on how the uma runs on the website.</li>
+        </ul>
+
+    </div>
+
     <h2>WIP (Work in Progress)</h2>
     
     <div class="project">
         <h3>Project</h3>
-        <p>Coming soon, will update once I start working on class projects!</p>
+        <p>Any future class projects will be put here!</p>
     </div>
     
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:youremail@example.com">stevenlin102360@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/yourusername">github.com/slin05</a></p>
+    <p>Email: <a href="mailto:stevenlin102360@gmail.com">stevenlin102360@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/slin05">github.com/slin05</a></p>
 
 </body>
 </html>
